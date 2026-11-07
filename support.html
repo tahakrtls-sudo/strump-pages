@@ -1,0 +1,239 @@
+<title>Strump Destek</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;1,700&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+  /* Gizlilik sayfasiyla ayni okuma duzeni: tek kolon, sol kenarda vurgu seridi. */
+  :root {
+    --bg: #FBFAF7;
+    --surface: #FFFFFF;
+    --fg: #15201B;
+    --fg-soft: #4A5A52;
+    --fg-mute: #74857C;
+    --rule: #E2E0DA;
+    --accent: #00805E;
+    --accent-soft: rgba(0, 128, 94, 0.10);
+    --display: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+    --body: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0A0F0D;
+      --surface: #121916;
+      --fg: #FFFFFF;
+      --fg-soft: #9DB2A9;
+      --fg-mute: #708A7E;
+      --rule: #22302A;
+      --accent: #00E6A8;
+      --accent-soft: rgba(0, 230, 168, 0.12);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0A0F0D;
+    --surface: #121916;
+    --fg: #FFFFFF;
+    --fg-soft: #9DB2A9;
+    --fg-mute: #708A7E;
+    --rule: #22302A;
+    --accent: #00E6A8;
+    --accent-soft: rgba(0, 230, 168, 0.12);
+    color-scheme: dark;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.65;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 48px 72px;
+  }
+  main { max-width: 42rem; margin: 0 auto; }
+
+  .eyebrow {
+    font-family: var(--display);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 10px;
+  }
+  h1 {
+    font-family: var(--display);
+    font-size: clamp(2.1rem, 7vw, 2.9rem);
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+    margin: 0 0 14px;
+  }
+  .lede { color: var(--fg-soft); font-size: 1.05rem; margin: 0; }
+  .meta {
+    display: flex; flex-wrap: wrap; gap: 6px 18px;
+    font-size: 0.82rem; color: var(--fg-mute);
+    margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--rule);
+  }
+  .meta b { font-weight: 600; color: var(--fg-soft); }
+
+  section { margin-top: 44px; }
+  h2 {
+    font-family: var(--display);
+    font-size: 1.45rem; font-weight: 600; letter-spacing: 0.01em;
+    margin: 0 0 14px; padding-left: 14px;
+    border-left: 3px solid var(--accent);
+    text-wrap: balance;
+  }
+  h3 {
+    font-family: var(--body);
+    font-size: 1rem; font-weight: 600;
+    margin: 26px 0 6px;
+  }
+  p { margin: 0 0 14px; }
+  ul, ol { margin: 0 0 14px; padding-left: 1.15rem; }
+  li { margin-bottom: 7px; }
+  li::marker { color: var(--fg-mute); }
+  strong { font-weight: 600; }
+  a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  .callout {
+    background: var(--accent-soft);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    padding: 18px 20px;
+    margin: 0 0 14px;
+  }
+  .callout p:last-child { margin-bottom: 0; }
+
+  .contact {
+    font-family: var(--display);
+    font-size: clamp(1.3rem, 5vw, 1.7rem);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    word-break: break-all;
+  }
+
+  footer {
+    margin-top: 56px; padding-top: 20px;
+    border-top: 1px solid var(--rule);
+    font-size: 0.85rem; color: var(--fg-mute);
+  }
+  footer p { margin-bottom: 8px; }
+</style>
+
+<main>
+  <p class="eyebrow">Strump</p>
+  <h1>Destek</h1>
+  <p class="lede">
+    Bir sorun mu var, bir koşu mu kayboldu, abonelik mi takıldı? Aşağıdaki
+    adımlar en sık gelen soruları kapsıyor; çözülmezse doğrudan yaz.
+  </p>
+
+  <div class="meta">
+    <span><b>Son güncelleme:</b> 31 Ekim 2026</span>
+    <span><b>Yanıt süresi:</b> 2 iş günü içinde</span>
+  </div>
+
+  <section>
+    <h2>İletişim</h2>
+    <div class="callout">
+      <p class="contact">strumprun@gmail.com</p>
+      <p>
+        Yazarken <strong>kullanıcı adını</strong>, cihaz modelini ve iOS sürümünü
+        eklersen sorunu çok daha hızlı buluruz. Bir koşuyla ilgiliyse koşunun
+        tarihini ve saatini de yaz.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Sık sorulanlar</h2>
+
+    <h3>Koşum kaydedilmedi ya da mesafe eksik çıktı</h3>
+    <p>
+      Strump ekran kapalıyken kaydı sürdürmek için <strong>arka plan konum
+      izni</strong> ister. iOS Ayarlar &rsaquo; Strump &rsaquo; Konum bölümünde
+      izin <strong>"Her Zaman"</strong> ve <strong>"Tam Konum" açık</strong>
+      olmalı. Ayrıca iOS Ayarlar &rsaquo; Genel &rsaquo; Arka Planda Yenileme
+      açık olmalı; düşük güç modu kaydı seyrelttiği için mesafeyi kısaltabilir.
+    </p>
+
+    <h3>Aboneliğimi nasıl iptal ederim</h3>
+    <p>
+      Abonelik Apple hesabın üzerinden yönetilir, uygulamadan iptal edilemez:
+      iPhone Ayarlar &rsaquo; adına dokun &rsaquo; Abonelikler &rsaquo; Strump
+      &rsaquo; Aboneliği İptal Et. İptal, dönem sonuna kadar erişimi kaldırmaz.
+    </p>
+
+    <h3>Pro aldım ama görünmüyor</h3>
+    <p>
+      Pro ekranındaki <strong>"Satın alımları geri yükle"</strong> düğmesine bas.
+      Satın alma hangi Apple hesabıyla yapıldıysa cihazda o hesabın açık olması
+      gerekir. Hâlâ gelmiyorsa satın alma tarihini ve Apple makbuz numarasını
+      bize yaz.
+    </p>
+
+    <h3>Para iadesi istiyorum</h3>
+    <p>
+      Uygulama içi satın alımların iadesini yalnız Apple yapabilir:
+      <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>
+      adresinden talep oluşturabilirsin. Bizim iade yetkimiz yok, ama talebini
+      desteklemek için gerekirse bilgi veririz.
+    </p>
+
+    <h3>Hesabımı silmek istiyorum</h3>
+    <p>
+      Uygulama içinden: Profil &rsaquo; Ayarlar &rsaquo; <strong>Hesabı
+      sil</strong>. Silme kalıcıdır; koşuların, fotoğrafların ve sosyal verin
+      geri getirilemez. <strong>Hesap silmek aboneliği iptal etmez</strong> —
+      ücret kesilmeye devam etmesin diye aboneliği önce Apple Ayarlar'dan iptal
+      et.
+    </p>
+
+    <h3>Verimin bir kopyasını istiyorum</h3>
+    <p>
+      E-posta ile talep et; hesabına bağlı tüm kayıtları makine okunur biçimde
+      30 gün içinde gönderiyoruz.
+    </p>
+
+    <h3>Rota önerileri şehrimde yok</h3>
+    <p>
+      Hazır rotalar şehir şehir ekleniyor. Şehrini yaz, listeye alalım.
+    </p>
+
+    <h3>Apple Health verisi gelmiyor</h3>
+    <p>
+      iOS Ayarlar &rsaquo; Sağlık &rsaquo; Veri Erişimi ve Aygıtlar &rsaquo;
+      Strump bölümünden okuma izinlerinin açık olduğunu kontrol et. İzinler
+      sonradan verildiyse uygulamayı tamamen kapatıp yeniden aç.
+    </p>
+  </section>
+
+  <section>
+    <h2>In English</h2>
+    <p>
+      Support is available in English as well. Write to
+      <strong>strumprun@gmail.com</strong> with your username, device model and
+      iOS version, and we will reply within two business days. Subscriptions are
+      managed in iOS Settings &rsaquo; your name &rsaquo; Subscriptions, and
+      refunds are handled by Apple at
+      <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.
+      You can delete your account permanently from Profile &rsaquo; Settings
+      &rsaquo; Delete account; deleting the account does not cancel an active
+      subscription.
+    </p>
+  </section>
+
+  <footer>
+    <p>
+      Gizlilik politikası ayrı bir sayfada: uygulama içinde Profil &rsaquo;
+      Ayarlar &rsaquo; Gizlilik Politikası.
+    </p>
+    <p>Strump</p>
+  </footer>
+</main>

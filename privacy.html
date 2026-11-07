@@ -1,0 +1,328 @@
+<title>Strump Gizlilik Politikası</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;1,700&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+  /* Tek kolon okuma düzeni: sol kenarda ince vurgu şeridi, bölümler numarasız. */
+  :root {
+    --bg: #FBFAF7;
+    --surface: #FFFFFF;
+    --fg: #15201B;
+    --fg-soft: #4A5A52;
+    --fg-mute: #74857C;
+    --rule: #E2E0DA;
+    --accent: #00805E;
+    --accent-soft: rgba(0, 128, 94, 0.10);
+    --display: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+    --body: 'Barlow', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0A0F0D;
+      --surface: #121916;
+      --fg: #FFFFFF;
+      --fg-soft: #9DB2A9;
+      --fg-mute: #708A7E;
+      --rule: #22302A;
+      --accent: #00E6A8;
+      --accent-soft: rgba(0, 230, 168, 0.12);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0A0F0D;
+    --surface: #121916;
+    --fg: #FFFFFF;
+    --fg-soft: #9DB2A9;
+    --fg-mute: #708A7E;
+    --rule: #22302A;
+    --accent: #00E6A8;
+    --accent-soft: rgba(0, 230, 168, 0.12);
+    color-scheme: dark;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.65;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 48px 72px;
+  }
+  main { max-width: 42rem; margin: 0 auto; }
+
+  .eyebrow {
+    font-family: var(--display);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 10px;
+  }
+  h1 {
+    font-family: var(--display);
+    font-size: clamp(2.1rem, 7vw, 2.9rem);
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+    margin: 0 0 14px;
+  }
+  .lede { color: var(--fg-soft); font-size: 1.05rem; margin: 0; }
+  .meta {
+    display: flex; flex-wrap: wrap; gap: 6px 18px;
+    font-size: 0.82rem; color: var(--fg-mute);
+    margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--rule);
+  }
+  .meta b { font-weight: 600; color: var(--fg-soft); }
+
+  section { margin-top: 44px; }
+  h2 {
+    font-family: var(--display);
+    font-size: 1.45rem; font-weight: 600; letter-spacing: 0.01em;
+    margin: 0 0 14px; padding-left: 14px;
+    border-left: 3px solid var(--accent);
+    text-wrap: balance;
+  }
+  h3 {
+    font-family: var(--body);
+    font-size: 1rem; font-weight: 600;
+    margin: 26px 0 6px;
+  }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 1.15rem; }
+  li { margin-bottom: 7px; }
+  li::marker { color: var(--fg-mute); }
+  strong { font-weight: 600; }
+  a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+  a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  .callout {
+    background: var(--accent-soft);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    padding: 18px 20px;
+    margin: 0 0 14px;
+  }
+  .callout p:last-child { margin-bottom: 0; }
+
+  .table-wrap { overflow-x: auto; margin: 0 0 14px; }
+  table { border-collapse: collapse; width: 100%; min-width: 30rem; font-size: 0.92rem; }
+  th, td { text-align: left; padding: 11px 14px 11px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  th {
+    font-family: var(--display); font-weight: 600;
+    font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--fg-mute); white-space: nowrap;
+  }
+  td:first-child { font-weight: 500; white-space: nowrap; padding-right: 22px; }
+  td:last-child, th:last-child { padding-right: 0; }
+
+  footer {
+    margin-top: 56px; padding-top: 20px;
+    border-top: 1px solid var(--rule);
+    font-size: 0.85rem; color: var(--fg-mute);
+  }
+  footer p { margin-bottom: 8px; }
+</style>
+
+<main>
+  <p class="eyebrow">Strump</p>
+  <h1>Gizlilik Politikası</h1>
+  <p class="lede">
+    Strump bir koşu ve yürüyüş günlüğüdür. Çalışabilmesi için konumunu kaydeder —
+    bu belge hangi veriyi topladığımızı, nerede durduğunu, kimle paylaşıldığını ve
+    nasıl sildiğini anlatır.
+  </p>
+
+  <div class="meta">
+    <span><b>Son güncelleme:</b> 30 Ekim 2026</span>
+    <span><b>Veri sorumlusu:</b> Taha Kurtuluş (Strump)</span>
+    <span><b>İletişim:</b> strumprun@gmail.com</span>
+  </div>
+
+  <section>
+    <h2>Özet</h2>
+    <div class="callout">
+      <p>
+        Verini satmıyoruz, uygulamada reklam göstermiyoruz ve hiçbir reklam ağına
+        koşu rotası vermiyoruz. Koşu verin
+        kendi hesabına bağlı olarak Supabase üzerinde saklanır; her tabloda satır
+        bazlı güvenlik (RLS) etkindir, yani başka bir kullanıcı senin satırlarını
+        okuyamaz. Oturum açmamış hiç kimse veri tabanından hiçbir şey okuyamaz.
+        Hesabını uygulama içinden kalıcı olarak silebilirsin.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Topladığımız veriler</h2>
+
+    <h3>Hesap bilgileri</h3>
+    <p>
+      E-posta adresi ve şifre (şifre bize hiç ulaşmaz, Supabase Auth tarafından
+      karma olarak tutulur), kullanıcı adı, isteğe bağlı ad, biyografi, profil
+      fotoğrafı ve şehir.
+    </p>
+
+    <h3>Konum ve koşu verisi</h3>
+    <p>
+      Koşuyu başlattığında GPS izini kaydederiz: koordinat dizisi, mesafe, süre,
+      tempo, yükseklik, adım sayısı ve tahmini kalori. Ekran kapalıyken de kaydın
+      sürmesi için <strong>arka plan konum izni</strong> isteriz; bu izin yalnız
+      aktif bir koşu kaydı sürerken kullanılır, koşu bitince konum takibi durur.
+    </p>
+
+    <h3>Sağlık ve vücut ölçüleri</h3>
+    <p>
+      Boy ve kilo yalnız sen girersen kaydedilir ve tempo/kalori hesabında
+      kullanılır. Apple Health veya Android Health Connect izni verirsen antrenman,
+      adım ve nabız verisini <strong>cihazından okuyup</strong> koşu kaydına
+      ekleriz. Bu izinleri Ayarlar'dan her an geri çekebilirsin.
+    </p>
+
+    <h3>Fotoğraflar</h3>
+    <p>
+      Bir koşuya fotoğraf eklersen dosya hesabına ait klasörde saklanır. Paylaşım
+      posteri oluşturulurken görüntü yeniden çizildiği için <strong>fotoğrafın EXIF
+      verisi (çekim konumu dahil) postere taşınmaz.</strong>
+    </p>
+
+    <h3>Sosyal etkileşim</h3>
+    <p>
+      Takip ettiklerin, beğeniler, yorumlar, kulüp üyelikleri ve etkinlik
+      katılımları. Yorum metinleri aktiviteyi görebilen kullanıcılara açıktır.
+    </p>
+
+    <h3>Cihaz ve teknik veriler</h3>
+    <p>
+      Bildirim gönderebilmek için cihaz bildirim anahtarı ve platform (iOS/Android).
+      Çökme ve hata raporları (hangi ekranda ne hata oluştu, uygulama sürümü).
+      Ücretsiz plandaki aylık kullanım sayaçları (kaç poster dışa aktardın gibi).
+    </p>
+  </section>
+
+  <section>
+    <h2>Konum gizliliğin için yaptıklarımız</h2>
+    <ul>
+      <li>
+        <strong>Gizlilik bölgeleri.</strong> Ev ya da iş adresinin çevresine bir
+        yarıçap tanımlarsan, o alana giren rota noktaları <strong>kaydedilmeden
+        önce kırpılır</strong> — sunucuya hiç gitmez. Fotoğraf işaretçileri de aynı
+        şekilde ayıklanır.
+      </li>
+      <li>
+        <strong>Gizli hesap.</strong> Açtığında aktiviteleri yalnız sana görünür ve
+        yeni koşular varsayılan olarak "Sadece Ben" gizliliğiyle kaydedilir.
+      </li>
+      <li>
+        <strong>Canlı konum paylaşımı isteğe bağlıdır.</strong> Açarsan konumun
+        yalnız <strong>seni takip edenlere</strong> ve yalnız koşu sürerken görünür.
+        Kayıt 15 dakika güncellenmezse bayat sayılır ve görünmez olur.
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Veriyi paylaştığımız hizmetler</h2>
+    <p>Aşağıdakiler dışında hiçbir üçüncü tarafa veri aktarmıyoruz:</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Hizmet</th><th>Ne için</th><th>Ne gidiyor</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Supabase</td>
+            <td>Veri tabanı, kimlik doğrulama, dosya saklama</td>
+            <td>Bu belgedeki tüm hesap ve koşu verisi</td>
+          </tr>
+          <tr>
+            <td>RevenueCat</td>
+            <td>Abonelik durumunu doğrulamak</td>
+            <td>Anonim kullanıcı kimliği ve satın alma kaydı</td>
+          </tr>
+
+          <tr>
+            <td>Sentry</td>
+            <td>Çökme ve hata teşhisi</td>
+            <td>Hata mesajı, ekran adı, uygulama sürümü. Rota noktası gönderilmez.</td>
+          </tr>
+          <tr>
+            <td>Hava durumu sağlayıcısı</td>
+            <td>Koşu anındaki hava koşulu</td>
+            <td>Yalnız yaklaşık koordinat, kendi sunucumuz aracılığıyla. Kimlik bilgisi gitmez.</td>
+          </tr>
+          <tr>
+            <td>Apple / Google</td>
+            <td>Abonelik tahsilatı ve bildirim iletimi</td>
+            <td>Ödemeyi mağaza işler; kart bilgisi bize hiç ulaşmaz.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      Önerilen koşu rotaları OpenStreetMap verisinden üretilir. Bu süreçte
+      kullanıcı verisi kullanılmaz ve dışarıya hiçbir şey gönderilmez.
+    </p>
+  </section>
+
+  <section>
+    <h2>Haklarını nasıl kullanırsın</h2>
+    <ul>
+      <li>
+        <strong>Silme.</strong> Ayarlar → Hesabı Sil. Hesabın, koşuların, rotaların
+        ve yüklediğin fotoğraflar kalıcı olarak silinir. Bu işlem geri alınamaz.
+        Not: hesabı silmek <strong>App Store / Google Play aboneliğini iptal
+        etmez</strong> — onu mağaza abonelik ayarlarından ayrıca iptal etmen gerekir.
+      </li>
+      <li>
+        <strong>Erişim ve düzeltme.</strong> Profil bilgilerini Ayarlar'dan
+        düzenleyebilir, aktivitelerini tek tek silebilirsin. Verinin bir kopyasını
+        istersen aşağıdaki adresten talep et.
+      </li>
+      <li>
+        <strong>İzinleri geri çekme.</strong> Konum, fotoğraf, bildirim ve sağlık
+        izinlerini işletim sistemi ayarlarından her an kapatabilirsin. Konum izni
+        kapalıyken koşu kaydı çalışmaz.
+      </li>
+
+    </ul>
+  </section>
+
+  <section>
+    <h2>Saklama süresi</h2>
+    <p>
+      Verini hesabın açık olduğu sürece tutarız. Hesabını sildiğinde veri tabanı
+      kayıtları ve dosyaların silme işlemiyle birlikte kaldırılır. Çökme raporları
+      Sentry'de 90 güne kadar tutulur ve koşu verisi içermez.
+    </p>
+  </section>
+
+  <section>
+    <h2>Çocuklar</h2>
+    <p>
+      Strump 13 yaşın altındaki kullanıcılara yönelik değildir ve bilerek bu yaş
+      grubundan veri toplamayız.
+    </p>
+  </section>
+
+  <section>
+    <h2>Değişiklikler</h2>
+    <p>
+      Bu politikayı güncellediğimizde üstteki tarih değişir. Toplanan veri
+      türlerinde önemli bir değişiklik olursa uygulama içinden haber veririz.
+    </p>
+  </section>
+
+  <footer>
+    <p>
+      Sorular, veri kopyası talepleri ve gizlilik başvuruları için:
+      <strong>strumprun@gmail.com</strong>
+    </p>
+    <p>Rota verisi © OpenStreetMap katkıcıları, ODbL lisansı.</p>
+  </footer>
+</main>
